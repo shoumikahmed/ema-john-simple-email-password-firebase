@@ -26,7 +26,7 @@ const SignUp = () => {
         setPassword(event.target.value)
     }
 
-    const handleConfirmPassword = event => {
+    const handleConfirmPasswordBlur = event => {
         setConfirmPassword(event.target.value)
     }
 
@@ -63,7 +63,7 @@ const SignUp = () => {
                     </div>
                     <div className="input-group">
                         <label htmlFor="confirm-password">Confirm Password</label>
-                        <input onBlur={handleConfirmPassword} type="password" name="confirm-password" id="" required />
+                        <input onBlur={handleConfirmPasswordBlur} type="password" name="confirm-password" id="" required />
                     </div>
 
                     <p style={{ color: 'red' }}>{password === confirmPassword ? '' : error || hookError}</p>
